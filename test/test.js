@@ -822,4 +822,22 @@ describe('node-fetch', function() {
 
 	});
 
+	it('should support string bodies in Response constructor', function() {
+		return (new Response('foo')).text().then(function(text) {
+			expect(text).to.equal('foo');
+		});
+	});
+
+	it('should support text() method in Request class', function() {
+		return (new Request('http://foo', {body: 'foo'})).text().then(function(text) {
+			expect(text).to.equal('foo');
+		});
+	}); 
+
+	it('should support json() method in Request class', function() {
+		return (new Request('http://foo', {body: '{"foo":"bar"}'})).json().then(function(json) {
+			expect(json.foo).to.equal('bar');
+		});
+	}); 
+
 });
