@@ -30,8 +30,7 @@ Node.js runtime.
 
 - Stay consistent with `window.fetch` API.
 - Make conscious trade-off when following [whatwg fetch spec](https://fetch.spec.whatwg.org/) and [stream spec](https://streams.spec.whatwg.org/) implementation details, document known difference.
-- Use native promise, but allow substituting it with [insert your favorite
-- promise library].
+- Use native promise, but allow substituting it with [insert your favorite promise library].
 - Use WhatWG `ReadableStream` for streaming bodies, on both request and response.
 - Useful extensions such as timeout, redirect limit, response size limit, explicit reject errors.
 
